@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import os
 from datetime import datetime
+import pytz
 import csv
 import pandas as pd
 from PIL import Image
@@ -71,7 +72,8 @@ class FaceAttendanceSystem:
                     self.descriptors_db[name] = np.vstack([self.descriptors_db[name], des])
 
     def mark_attendance(self, name, subject):
-        now = datetime.now()
+        ist = pytz.timezone('Asia/Kolkata')
+        now = datetime.now(ist)
         date_string = now.strftime("%Y-%m-%d")
         time_string = now.strftime("%H:%M:%S")
 
@@ -283,7 +285,9 @@ with st.sidebar:
     st.info(f"**Total Users:** {len(st.session_state.system.known_face_names)}")
 
     # Count today's attendance
-    today = datetime.now().strftime("%Y-%m-%d")
+    ist = pytz.timezone('Asia/Kolkata')
+    today = datetime.now(ist).strftime("%Y-%m-%d")
+
     today_count = 0
     try:
         with open(st.session_state.system.attendance_file, 'r') as f:
