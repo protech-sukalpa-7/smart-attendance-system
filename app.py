@@ -386,7 +386,7 @@ elif page == "➕ Register Face":
     st.markdown("# ➕ Register New Face")
     st.markdown("### Add a new person to the attendance system")
 
-    name = st.text_input("👤 Enter Person's Name:", placeholder="e.g., John Doe")
+    name = st.text_input("👤 Enter Person's Name:", placeholder="e.g., Sukalpa Manna")
 
     col1, col2 = st.columns([2, 1])
 
