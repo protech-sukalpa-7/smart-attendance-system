@@ -1,10 +1,4 @@
 import streamlit as st
-st.markdown("""
-<meta property="og:title" content="Smart Face Attendance System">
-<meta property="og:description" content="Real-time face recognition attendance system built with Python and OpenCV.">
-<meta property="og:image" content="https://raw.githubusercontent.com/<your-username>/<repo>/main/preview.png">
-<meta property="og:url" content="https://sm-face-attendance-system.streamlit.app/">
-""", unsafe_allow_html=True)
 import cv2
 import numpy as np
 import os
