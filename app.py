@@ -457,7 +457,7 @@ elif page == "✅ Mark Attendance":
     else:
         subject = st.text_input(
             "📚 Enter Subject Name:",
-            placeholder="e.g., DBMS, COA, Mathematics"
+            placeholder="e.g., DSA, CO, Math"
         )
 
         col1, col2 = st.columns([2, 1])
